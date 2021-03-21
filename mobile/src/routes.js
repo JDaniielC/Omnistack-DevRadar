@@ -39,4 +39,4 @@ export default Routes;
 //yarn add react-navigation-stack
 //expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
 //Se não funcionar instala dnv yarn add @react-native-community/masked-view
-//
+//yarn add socket.io-client
