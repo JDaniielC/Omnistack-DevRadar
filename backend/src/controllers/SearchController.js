@@ -1,14 +1,24 @@
-const dev = require('../models/dev');
+const Dev = require('../models/dev');
 const StringAsArray = require('../utils/StringAsArray');
 
 module.exports = {
     async index(request, response) {
         const {latitude, longitude, techs } = request.query;
+
         const techsArray = StringAsArray(techs);
-        const devs = await dev.find({
-            techs: {
+        
+        let techs_query;
+        if (techsArray[0] == "") {
+            techs_query = {
+                $ne: techsArray
+            }
+        } else {
+            techs_query = {
                 $in: techsArray,
-            },
+            }
+        }
+        const devs = await Dev.find({
+            techs: techs_query,
             location: {
                 $near: {
                     $geometry: {
@@ -19,9 +29,8 @@ module.exports = {
                 },
             },
         });
-        return response.json ({
-            devs: []
-        });
+        
+        return response.json(devs);
     }
 
 }

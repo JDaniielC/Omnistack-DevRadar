@@ -8,6 +8,7 @@ module.exports = {
         const devs = await Dev.find();
         return response.json(devs);
     },
+    
     async store(request,response) {
         const {github_username, techs, latitude, longitude} = request.body; 
 

@@ -2,7 +2,7 @@ import socketio from 'socket.io-client';
 
 const socket = socketio('http://192.168.101.8:3333', {
     autoConnect: false,
-})
+});
 
 function subscribeToNewDevs(subcribeFunction) {
     socket.on('new-Dev', subcribeFunction);

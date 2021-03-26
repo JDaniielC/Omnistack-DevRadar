@@ -1,3 +1,3 @@
-module.exports = function StringAsArray(arrayAsString){
-        return arrayAsString.split(',').map(text => text.trim());
+module.exports = function StringAsArray(string){
+	return string.split(',').map(text => text.trim());
 }
