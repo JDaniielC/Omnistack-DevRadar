@@ -33,7 +33,7 @@ module.exports = {
                 avatar_url,
                 bio,
                 techs: techsArray,
-                location,
+                location
             })
 
             const sendSocketMessageTo = findConnections(
@@ -43,7 +43,7 @@ module.exports = {
             sendMessage(sendSocketMessageTo, 'new-dev', dev);
 
         }
-        return response.json (dev)
+        return response.json(dev)
     }
 }
 //Fazer o upadate e delete
