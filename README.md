@@ -6,6 +6,8 @@
 
 Projeto em React auxíliado pela rocketseat.
 
+![home image](.github/logo.png)
+
 ## Instalação
 Configure o MongoDB e atualize a string de conexão com seu `User:Senha` no arquivo `index.js`.  
 Para instalar as dependências e executar o **Servidor** (modo desenvolvimento), clone o projeto em seu computador e em seguida execute:
